@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    command: yarn start
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      # Mount the sync folder to ensure file changes are synchronized
+      - sync:/app/node_modules
+    environment:
+      - NODE_ENV=development
+
+volumes:
+  sync:
+    external: true
