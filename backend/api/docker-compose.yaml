@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+ #MongoDB Service
+
+  mongo_db:
+     container_name: db_container
+     image: mongo:latest
+     restart: always
+     volumes:
+       - mongo_db:/data/db
+
+# api service
+  api:
+      build: .
+      ports:
+        - "5000:5000"
+      volumes:
+        - ./server.js:/app/server.js
+      environment:
+        MONGODB_URL: mongodb://gigi:tomi@ac-a5ygtx1-shard-00-00.vadkdy7.mongodb.net:27017,ac-a5ygtx1-shard-00-01.vadkdy7.mongodb.net:27017,ac-a5ygtx1-shard-00-02.vadkdy7.mongodb.net:27017/?ssl=true&replicaSet=atlas-10ol5y-shard-0&authSource=admin&retryWrites=true&w=majority&appName=track
+      depends_on:
+        - mongo_db
+
+volumes:
+  mongo_db: {}
+
+
+
+
