@@ -19,3 +19,5 @@ npm install
 ```
 npm run server
 ```
+
+the app is not yet completely implemented
