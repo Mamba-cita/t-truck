@@ -4,14 +4,15 @@
 
 ** T-TRuck is a comprehensive tracking platform designed for small fleet owners to manage their trucks efficiently. The platform offers features like tracking, expense monitoring (e.g., fuel), load planning, invoicing, and profit visualization, all in one place.
 
-Deployed Site - Not deployed on localhost
-Final Project Blog Article - in progress
-Author(s) LinkedIn - [contributors](https://www.linkedin.com/in/edwin-john-a965831a6/)
+**Deployed Site - Not deployed on localhost
+**Final Project Blog Article - in progress
+**Author(s) LinkedIn - [contributors](https://www.linkedin.com/in/edwin-john-a965831a6/)
 
-Installation
+# Installation
+
 Rename the .envexample file to .env and add your MONGO_URI.
 
-Install Dependencies
+# Install Dependencies
 
 # api
 
